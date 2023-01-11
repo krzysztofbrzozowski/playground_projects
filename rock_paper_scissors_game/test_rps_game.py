@@ -6,12 +6,12 @@
 """
 import unittest
 
-from main import *
+from rps_game import *
 
 
 class RPSTests(unittest.TestCase):
     def setUp(self):
-        self.rsp_game = Game()
+        self.rsp_game = RPSGame()
 
     def test_init_input_raise_error(self):
         with self.assertRaises(NotImplementedError):
