@@ -1,0 +1,12 @@
+
+name: unittests
+on: push
+
+jobs:
+
+  Everything:
+    runs-on: ubuntu-22.04
+    container: python:3.11.1
+    steps:
+      - uses: actions/checkout@v3
+      - run: python run.py --unittest rock_paper_scissors_game/test_rps_game.py

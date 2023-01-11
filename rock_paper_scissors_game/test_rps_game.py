@@ -1,6 +1,6 @@
 """
 @author:    Krzysztof Brzozowski
-@file:      tests_rsp_game
+@file:      tests_rps_game
 @time:      1/11/2023
 @desc:  
 """
