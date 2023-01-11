@@ -6,7 +6,7 @@
 """
 import unittest
 
-from rps_game import *
+from rock_paper_scissors_game.rps_game import *
 
 
 class RPSTests(unittest.TestCase):
