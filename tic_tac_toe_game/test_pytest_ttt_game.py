@@ -16,14 +16,14 @@ from tic_tac_toe_game.ttt_game import *
     ([[None, None, None], [None, None, None], ['x', None, None]], None),
     ([[None, None, 'x'], [None, None, None], [None, None, None]], None),
     ([[None, None, None], [None, None, None], [None, None, 'x']], None),
-    ([['x', 'x', 'x'], [None, None, None], [None, None, None]], 'player None won -> row equal'),
-    ([[None, None, None], ['x', 'x', 'x'], [None, None, None]], 'player None won -> row equal'),
-    ([[None, None, None], [None, None, None], ['x', 'x', 'x']], 'player None won -> row equal'),
-    ([['x', None, None], ['x', None, None], ['x', None, None]], 'player None won -> column equal'),
-    ([[None, 'x', None], [None, 'x', None], [None, 'x', None]], 'player None won -> column equal'),
-    ([[None, None, 'x'], [None, None, 'x'], [None, None, 'x']], 'player None won -> column equal'),
-    ([['x', None, None], [None, 'x', None], [None, None, 'x']], 'player None won -> diagonal equal'),
-    ([[None, None, 'x'], [None, 'x', None], ['x', None, None]], 'player None won -> -diagonal equal'),
+    ([['x', 'x', 'x'], [None, None, None], [None, None, None]], '--->  Player None won -> row equal'),
+    ([[None, None, None], ['x', 'x', 'x'], [None, None, None]], '--->  Player None won -> row equal'),
+    ([[None, None, None], [None, None, None], ['x', 'x', 'x']], '--->  Player None won -> row equal'),
+    ([['x', None, None], ['x', None, None], ['x', None, None]], '--->  Player None won -> column equal'),
+    ([[None, 'x', None], [None, 'x', None], [None, 'x', None]], '--->  Player None won -> column equal'),
+    ([[None, None, 'x'], [None, None, 'x'], [None, None, 'x']], '--->  Player None won -> column equal'),
+    ([['x', None, None], [None, 'x', None], [None, None, 'x']], '--->  Player None won -> diagonal equal'),
+    ([[None, None, 'x'], [None, 'x', None], ['x', None, None]], '--->  Player None won -> -diagonal equal'),
 ])
 class TestTicTacToeGame:
     @pytest.fixture(autouse=True)

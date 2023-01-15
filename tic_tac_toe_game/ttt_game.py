@@ -41,15 +41,15 @@ class TTTGame:
         for idx in range(3):
             if len(set(i for i in self.play_field[idx])) == 1 and \
                     next(iter(set(i for i in self.play_field[idx]))):
-                return f'player {self.current_player} won -> row equal'
+                return f'--->  Player {self.current_player} won -> row equal'
 
             if len(set(row[idx] for row in self.play_field)) == 1 and \
                     next(iter(set(row[idx] for row in self.play_field))) is not None:
-                return f'player {self.current_player} won -> column equal'
+                return f'--->  Player {self.current_player} won -> column equal'
 
         if len(set(self.play_field[p][p] for p in range(3))) == 1 and \
                 next(iter(set(self.play_field[p][p] for p in range(3)))) is not None:
-            return f'player {self.current_player} won -> diagonal equal'
+            return f'--->  Player {self.current_player} won -> diagonal equal'
 
         if len(set(self.play_field[-p - 1][p] for p in range(3))) == 1 and \
                 next(iter(set(self.play_field[-p - 1][p] for p in range(3)))) is not None:
