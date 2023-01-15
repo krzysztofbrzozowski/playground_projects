@@ -170,7 +170,7 @@ class PyTests(Action):
     def run_doctest(file: Path):
         log.debug(f'RUN\t {file}')
         try:
-            exitcode = run(f'python -m unittest -v {file}', timeout=20)
+            exitcode = run(f'python -m pytest -v {file}', timeout=20)
         except TimeoutError:
             log.error(f'TIMEOUT\t{file}')
             exit(1)
