@@ -14,4 +14,24 @@ Select paper, rock or scissors and computer will randomly select its own.
 
 tic_tac_toe_game
 ----
+Play tic-tac-toe with second player by providing X and Y coordinates of your 'X' or 'O'
 
+.. code-block:: console
+
+    Provide X and Y coordinates for your point
+    0,0
+    User 0 set x_coordinates=0, y_coordinates=0
+    ['x', None, None]
+    [None, None, None]
+    [None, None, None]
+    Provide X and Y coordinates for your point
+
+    ...
+
+    Provide X and Y coordinates for your point
+    2,2
+    User 0 set x_coordinates=2, y_coordinates=2
+    ['x', 'o', None]
+    [None, 'x', None]
+    ['o', None, 'x']
+    player User 0 won -> diagonal equal

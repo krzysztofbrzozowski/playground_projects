@@ -55,11 +55,15 @@ class TTTGame:
                 next(iter(set(self.play_field[-p - 1][p] for p in range(3)))) is not None:
             return f'player {self.current_player} won -> -diagonal equal'
 
+        return None
+
 
 if __name__ == '__main__':
     tic_tac_toe_game = TTTGame()
+
     while True:
-        tic_tac_toe_game.set_sign_user(0, 'x')
-        print(tic_tac_toe_game.verify_win())
-        tic_tac_toe_game.set_sign_user(1, 'o')
-        print(tic_tac_toe_game.verify_win())
+        for user_idx, user_sign in enumerate(['x', 'o']):
+            tic_tac_toe_game.set_sign_user(user_idx, user_sign)
+            if tic_tac_toe_game.verify_win() is not None:
+                print(tic_tac_toe_game.verify_win())
+                exit(0)

@@ -69,7 +69,7 @@ class TTTTests(unittest.TestCase):
             [None, None, None],
             [None, None, None]
         ]
-        self.assertNotEqual(self.tic_tac_toe_game.verify_win(), f'player {self.test_player} won -> row equal')
+        self.assertEqual(self.tic_tac_toe_game.verify_win(), None)
 
     def test_column_result(self):
         self.tic_tac_toe_game.play_field = [
@@ -85,7 +85,7 @@ class TTTTests(unittest.TestCase):
             ['o', None, None],
             ['x', None, None]
         ]
-        self.assertNotEqual(self.tic_tac_toe_game.verify_win(), f'player {self.test_player} won -> column equal')
+        self.assertEqual(self.tic_tac_toe_game.verify_win(), None)
 
     def test_diagonal_result(self):
         self.tic_tac_toe_game.play_field = [
@@ -101,7 +101,7 @@ class TTTTests(unittest.TestCase):
             [None, 'o', None],
             [None, None, 'x']
         ]
-        self.assertNotEqual(self.tic_tac_toe_game.verify_win(), f'player {self.test_player} won -> diagonal equal')
+        self.assertEqual(self.tic_tac_toe_game.verify_win(), None)
 
     def test_diagonal_reverse_result(self):
         self.tic_tac_toe_game.play_field = [
@@ -117,6 +117,6 @@ class TTTTests(unittest.TestCase):
             [None, 'o', None],
             ['x', None, None]
         ]
-        self.assertNotEqual(self.tic_tac_toe_game.verify_win(), f'player {self.test_player} won -> -diagonal equal')
+        self.assertEqual(self.tic_tac_toe_game.verify_win(), None)
 
 
