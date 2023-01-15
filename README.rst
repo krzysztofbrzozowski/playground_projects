@@ -5,7 +5,12 @@ rock_paper_scissors_game
 Play rock-paper-scissors with computer.
 Select paper, rock or scissors and computer will randomly select its own.
 
-..  code-block:: python
+.. code-block:: python
+
+    data = {1}
+    isinstance(data, set)   # True
+    isinstance(data, dict)  # False
+
     Select one choice: (p)aper, (r)ock, (s)cissors, (e)xitt
     p
     self.user_choice='paper', self.computer_choice='rock'
