@@ -5,7 +5,7 @@ rock_paper_scissors_game
 Play rock-paper-scissors with computer.
 Select paper, rock or scissors and computer will randomly select its own.
 
-.. code-block:: python
+.. code-block:: console
 
     Select one choice: (p)aper, (r)ock, (s)cissors, (e)xit
     p
