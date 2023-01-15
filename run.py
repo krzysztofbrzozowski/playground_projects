@@ -192,6 +192,10 @@ if __name__ == '__main__':
                         nargs='+', metavar='UNITTEST_FILE', action=PyTests,
                         help='--unittest *.py files')
 
+    parser.add_argument('--install',
+                        nargs='?', metavar='INSTALL_FILE', action=Install,
+                        help='install requirements')
+
     parser.parse_args()
 
     if len(sys.argv) == 1:
