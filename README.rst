@@ -34,4 +34,4 @@ Play tic-tac-toe with second player by providing X and Y coordinates of your 'X'
     ['x', 'o', None]
     [None, 'x', None]
     ['o', None, 'x']
-    player User 0 won -> diagonal equal
+    --->  Player User 0 won -> diagonal equal

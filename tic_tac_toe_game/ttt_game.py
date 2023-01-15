@@ -53,7 +53,7 @@ class TTTGame:
 
         if len(set(self.play_field[-p - 1][p] for p in range(3))) == 1 and \
                 next(iter(set(self.play_field[-p - 1][p] for p in range(3)))) is not None:
-            return f'player {self.current_player} won -> -diagonal equal'
+            return f'--->  Player {self.current_player} won -> -diagonal equal'
 
         return None
 
