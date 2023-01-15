@@ -37,10 +37,12 @@ class TTTGame:
 
     def verify_win(self):
         for idx in range(3):
-            if len({i for i in self.play_field[idx]}) == 1:
+            if len(set(i for i in self.play_field[idx])) == 1 \
+                    and next(iter(set(i for i in self.play_field[idx]))):
                 return 'row equal'
 
-            if len({row[idx] for row in self.play_field}) == 1:
+            if len(set(row[idx] for row in self.play_field)) == 1 \
+                    and next(iter(set(row[idx] for row in self.play_field))) is not None:
                 return 'column equal'
 
             if len({self.play_field[p][p] for p in range(3)}) == 1:
