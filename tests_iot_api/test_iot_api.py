@@ -13,6 +13,7 @@ try:
     from secrets import API_TOKEN
 except ImportError as e:
     API_TOKEN = os.environ['API_TOKEN']
+    print(API_TOKEN)
 
 ENDPOINT = 'http://iot-api.krzysztofbrzozowski.pl'
 
