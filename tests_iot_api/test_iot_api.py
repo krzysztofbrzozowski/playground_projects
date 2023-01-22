@@ -29,7 +29,7 @@ class TestIoTAPITempMonitor:
 
     def test_create_db_record_with_sample_data(self):
         headers = {'Authorization': f'Token {API_KEY}', 'Content-Type': 'application/json'}
-        payload = [{'hex_address': 31, 'temperature': 10, 'humidity': 20}]
+        payload = [{'hex_address': 0x01, 'temperature': 10, 'humidity': 20}]
 
         response = requests.post(f'{ENDPOINT}/post-pms-data', json=payload, headers=headers)
         print(response.content)
@@ -37,7 +37,7 @@ class TestIoTAPITempMonitor:
 
     def test_create_db_record_requires_token(self):
         headers = {'Authorization': f'Token WRONG_TOKEN', 'Content-Type': 'application/json'}
-        payload = [{'hex_address': 31, 'temperature': 10, 'humidity': 20}]
+        payload = [{'hex_address': 0x01, 'temperature': 10, 'humidity': 20}]
 
         response = requests.post(f'{ENDPOINT}/post-pms-data', json=payload, headers=headers)
         print(response.content)
