@@ -10,10 +10,10 @@ import requests
 
 # Hidden values, in GitHub workflows it is accessible via os.
 try:
-    from secrets import API_TOKEN
+    from secrets import API_KEY
 except ImportError as e:
-    API_TOKEN = os.environ['API_TOKEN']
-    print(API_TOKEN)
+    API_KEY = os.environ['API_KEY']
+    print(API_KEY)
 
 ENDPOINT = 'http://iot-api.krzysztofbrzozowski.pl'
 
@@ -28,7 +28,7 @@ class TestIoTAPITempMonitor:
         assert response.status_code == 200
 
     def test_create_db_record_with_sample_data(self):
-        headers = {'Authorization': f'Token {API_TOKEN}', 'Content-Type': 'application/json'}
+        headers = {'Authorization': f'Token {API_KEY}', 'Content-Type': 'application/json'}
         payload = [{'hex_address': 31, 'temperature': 10, 'humidity': 20}]
 
         response = requests.post(f'{ENDPOINT}/post-pms-data', json=payload, headers=headers)
