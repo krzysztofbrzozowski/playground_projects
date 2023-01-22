@@ -125,3 +125,6 @@ dmypy.json
 
 Thumbs.db
 .DS_Store
+
+# Restricted files
+/tests_iot_api/restricted_config.py
