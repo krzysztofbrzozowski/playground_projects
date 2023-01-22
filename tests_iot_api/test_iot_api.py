@@ -4,10 +4,15 @@
 @time:      22/01/2023
 @desc:      
 """
+import os
 import pytest
 import requests
 
-from restricted_config import API_TOKEN
+# Hidden values, in GitHub workflows it is accessible via os.
+try:
+    from secrets import API_TOKEN
+except ImportError as e:
+    API_TOKEN = os.environ['API_TOKEN']
 
 ENDPOINT = 'http://iot-api.krzysztofbrzozowski.pl'
 
