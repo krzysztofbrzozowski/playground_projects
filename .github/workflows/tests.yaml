@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: python run.py --install
       - run: python run.py --unittest rock_paper_scissors_game/test_rps_game.py tic_tac_toe_game/test_ttt_game.py
-      - run: python run.py --pytest tic_tac_toe_game/test_pytest_ttt_game.py tests_iot_api/test_iot_api.py
+      - run: python run.py --pytest tic_tac_toe_game/test_pytest_ttt_game.py
       - run: python run.py --pytest tests_iot_api/test_iot_api.py
         env:
           API_KEY: ${{ secrets.API_KEY }}
