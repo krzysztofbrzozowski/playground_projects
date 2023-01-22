@@ -44,6 +44,8 @@ class TestIoTAPITempMonitor:
                                   for k, v in response.items()
                                   if k == 'title' and v == create_db_record_response['title']][0]
 
+        print(get_db_record_response)
+
         assert get_db_record_response['title'] == create_db_record_response['title']
         assert get_db_record_response['hex_address'] == create_db_record_response['hex_address']
 
@@ -54,3 +56,8 @@ class TestIoTAPITempMonitor:
         response = requests.post(f'{ENDPOINT}/post-pms-data', json=payload, headers=headers)
         print(response.content)
         assert response.status_code == 401
+
+    def test_delete_db_record(self):
+        headers = {'Authorization': f'Token {API_KEY}', 'Content-Type': 'application/json'}
+        response = requests.delete(f'{ENDPOINT}/delete-pms-data/83', headers=headers)
+        assert response.status_code == 204
