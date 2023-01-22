@@ -4,7 +4,7 @@ on: push
 
 jobs:
 
-  Everything:
+  Tests:
     runs-on: ubuntu-22.04
     container: python:3.11.1
     steps:
