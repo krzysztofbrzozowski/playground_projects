@@ -17,7 +17,6 @@ except ImportError as e:
 ENDPOINT = 'http://iot-api.krzysztofbrzozowski.pl'
 
 
-
 class TestIoTAPITempMonitor:
     @pytest.fixture(autouse=True)
     def setup_startup(self):
