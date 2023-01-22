@@ -30,9 +30,22 @@ class TestIoTAPITempMonitor:
         headers = {'Authorization': f'Token {API_KEY}', 'Content-Type': 'application/json'}
         payload = [{'hex_address': 0x01, 'temperature': 10, 'humidity': 20}]
 
-        response = requests.post(f'{ENDPOINT}/post-pms-data', json=payload, headers=headers)
-        print(response.content)
-        assert response.status_code == 201
+        # POST
+        create_db_record_response = requests.post(url=f'{ENDPOINT}/post-pms-data', json=payload, headers=headers)
+        assert create_db_record_response.status_code == 201
+        create_db_record_response = create_db_record_response.json()[0]
+
+        # GET
+        get_db_record_response = requests.get(url=f'{ENDPOINT}/get-pms-data/{0x01}')
+        assert get_db_record_response.status_code == 200
+        # Currently, overcomplicated because no option in API to get one record
+        get_db_record_response = [response
+                                  for response in get_db_record_response.json()
+                                  for k, v in response.items()
+                                  if k == 'title' and v == create_db_record_response['title']][0]
+
+        assert get_db_record_response['title'] == create_db_record_response['title']
+        assert get_db_record_response['hex_address'] == create_db_record_response['hex_address']
 
     def test_create_db_record_requires_token(self):
         headers = {'Authorization': f'Token WRONG_TOKEN', 'Content-Type': 'application/json'}
