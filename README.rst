@@ -38,6 +38,7 @@ Play tic-tac-toe with second player by providing X and Y coordinates of your 'X'
 
 algorithms
 ----
-#TODO
+TODO
+
 * binary search algo
 * selection sort algo
