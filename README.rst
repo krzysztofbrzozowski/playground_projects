@@ -35,3 +35,9 @@ Play tic-tac-toe with second player by providing X and Y coordinates of your 'X'
     [None, 'x', None]
     ['o', None, 'x']
     --->  Player User 0 won -> diagonal equal
+
+algorithms
+----
+#TODO
+* binary search algo
+* selection sort algo
