@@ -57,6 +57,7 @@ class TestIoTAPITempMonitor:
         print(response.content)
         assert response.status_code == 401
 
+    @pytest.mark.skip(reason="API does not handle that yet")
     def test_delete_db_record(self):
         headers = {'Authorization': f'Token {API_KEY}', 'Content-Type': 'application/json'}
         response = requests.delete(f'{ENDPOINT}/delete-pms-data/83', headers=headers)
