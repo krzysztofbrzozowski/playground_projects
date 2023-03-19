@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: _ci_docker_action/
+        uses: /_ci_docker_action
         with:
           who-to-greet: 'Mona the Octocat'
 
