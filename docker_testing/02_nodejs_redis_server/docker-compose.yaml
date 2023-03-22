@@ -1,0 +1,12 @@
+version: '3'
+# Like containers
+services:
+  # First one is redis server
+  redis-server:
+    image: 'redis'
+  # Second one is my node.js server
+  node-app:
+    build: .
+    ports:
+      - "4001:8081"
+
