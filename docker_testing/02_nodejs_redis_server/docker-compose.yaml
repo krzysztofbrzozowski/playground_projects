@@ -6,6 +6,7 @@ services:
     image: 'redis'
   # Second one is my node.js server
   node-app:
+    restart: always
     build: .
     ports:
       - "4001:8081"
