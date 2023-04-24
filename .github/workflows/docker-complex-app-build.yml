@@ -18,13 +18,13 @@ jobs:
       - run: docker build -t ${{ secrets.DOCKER_USERNAME }}/multi-server-10-14 ./docker_testing/04_complex_fibonacci_app/server
       - run: docker build -t ${{ secrets.DOCKER_USERNAME }}/multi-worker-10-14 ./docker_testing/04_complex_fibonacci_app/worker
 
-#      - run: docker push cygnetops/multi-client-10-14
-#      - run: docker push cygnetops/multi-nginx-10-14
-#      - run: docker push cygnetops/multi-server-10-14
-#      - run: docker push cygnetops/multi-worker-10-14
-#
-#      - name: Generate deployment package
-#        run: zip -r deploy.zip . -x '*.git*'
+      - run: docker push ${{ secrets.DOCKER_USERNAME }}/multi-client-10-14
+      - run: docker push ${{ secrets.DOCKER_USERNAME }}/multi-nginx-10-14
+      - run: docker push ${{ secrets.DOCKER_USERNAME }}/multi-server-10-14
+      - run: docker push ${{ secrets.DOCKER_USERNAME }}/multi-worker-10-14
+
+      - name: Generate deployment package
+        run: zip -r deploy.zip ./docker_testing/04_complex_fibonacci_app -x '*.git*'
 #
 #      - name: Deploy to EB
 #        uses: einaregilsson/beanstalk-deploy@v18

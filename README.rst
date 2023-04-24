@@ -42,3 +42,10 @@ TODO
 
 * binary search algo
 * selection sort algo
+
+docker_testing
+----
+Sample projects from tutorials as a cheatsheet for future actions
+Uses:
+* Docker
+* GitHub workflows
