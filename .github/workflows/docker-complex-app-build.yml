@@ -13,11 +13,11 @@ jobs:
       - run: docker build -t ${{ secrets.DOCKER_USERNAME }}/react-test -f ./docker_testing/04_complex_fibonacci_app/client/Dockerfile.dev ./docker_testing/04_complex_fibonacci_app/client
       - run: docker run -e CI=true ${{ secrets.DOCKER_USERNAME }}/react-test npm test
 
-#      - run: docker build -t cygnetops/multi-client-10-14 ./client
-#      - run: docker build -t cygnetops/multi-nginx-10-14 ./nginx
-#      - run: docker build -t cygnetops/multi-server-10-14 ./server
-#      - run: docker build -t cygnetops/multi-worker-10-14 ./worker
-#
+      - run: docker build -t ${{ secrets.DOCKER_USERNAME }}/multi-client-10-14 ./docker_testing/04_complex_fibonacci_app/client
+      - run: docker build -t ${{ secrets.DOCKER_USERNAME }}/multi-nginx-10-14 ./docker_testing/04_complex_fibonacci_app/nginx
+      - run: docker build -t ${{ secrets.DOCKER_USERNAME }}/multi-server-10-14 ./docker_testing/04_complex_fibonacci_app/server
+      - run: docker build -t ${{ secrets.DOCKER_USERNAME }}/multi-worker-10-14 ./docker_testing/04_complex_fibonacci_app/worker
+
 #      - run: docker push cygnetops/multi-client-10-14
 #      - run: docker push cygnetops/multi-nginx-10-14
 #      - run: docker push cygnetops/multi-server-10-14
