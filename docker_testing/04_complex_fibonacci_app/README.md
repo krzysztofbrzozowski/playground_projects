@@ -4,6 +4,11 @@ How to run project?
 ```
 docker-compose down && docker-compose up --build
 ```
+Then go to
+```
+http://localhost:3050
+```
+
 App architecture
 -
 ![App architecture](https://krzysztofbrzozowski.com/media/2023/04/24/app_architecture_0.png)
